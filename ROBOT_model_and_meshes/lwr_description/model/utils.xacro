@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-
+<!-- 这里是定义一个常量，叫做M_PI 值等于3.14...-->
   <xacro:property name="M_PI" value="3.1415926535897931"/>
 
   <!-- Little helper macro to define the inertia matrix needed for links. -->
+  <!-- 这里是定义一个宏，姓名，还有参数，inertia是惯性，有什么意义现在还不明白。-->
   <xacro:macro name="cuboid_inertia_def" params="width height length mass">
     <inertia ixx="${mass * (height * height + length * length) / 12}"
              iyy="${mass * (width * width + length * length) / 12}"
